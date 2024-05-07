@@ -25,6 +25,7 @@ class Alumno:
 
 #Creación de la clase Grupo
 class Grupo:
-    #Se indican atributos privados usando doble subguion
-    __alumnos = []   #Vector de alumnos para objetos de la clase Alumno
-    __cantidad = 0   #Cantidad para el grupo de alumnos
+    def __init__(self, cantidad):
+        #Se indican atributos privados usando doble subguion
+        self.__alumnos = [] #Vector de alumnos para objetos de la clase Alumno
+        self.__cantidad = cantidad #Cantidad para el grupo de alumnos
