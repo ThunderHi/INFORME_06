@@ -30,3 +30,11 @@ class Grupo:
         #Se indican atributos privados usando doble subguion
         self.__alumnos = [] #Vector de alumnos para objetos de la clase Alumno
         self.__cantidad = cantidad #Cantidad para el grupo de alumnos
+    
+    #Metodo que devuelve estado del objeto Grupo
+    def __str__(self):
+        alumnos_str = "" #representaciones en string de cada alumno en el grupo
+        for alumno in self.__alumnos:   #iteracion sobre lista de alumnos
+            alumnos_str += str(alumno) + "\n" #se agrega en una nueva linea de alunos_str
+        return f"Grupo:\n{alumnos_str}" #Devuelve el valor de alumnos_str en string
+    
