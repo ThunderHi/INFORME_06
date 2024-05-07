@@ -21,7 +21,7 @@ class Alumno:
     
     #Creacion de metodo que compara promedio entre objetos
     def __lt__(self, otro):
-        return self.__promedio < otro.get_promedio()
+        return self.__promedio < otro.getPromedio()
 
 #Creación de la clase Grupo
 class Grupo:
@@ -56,4 +56,16 @@ class Grupo:
             return 0    #en ese caso devuelve 0 para evitar dividir entre 0
         #se obtiene el promedio de cada alumno mediante un "for", se suma, y se divide entre
         #la longitud del vector. Devuelve el promedio de promedios
-        return sum(alumno.get_promedio() for alumno in self.__alumnos) / len(self.__alumnos)
+        return sum(alumno.getPromedio() for alumno in self.__alumnos) / len(self.__alumnos)
+    
+    #Metodo para retornar mejor promedio
+    def mejor_promedio(self):
+        if not self.__alumnos:  #Verifica si vector esta vacio
+            return None #Retorna None (ninguno)
+        #Escoge el primer objeto de vector como partida para operar
+        mejor_promedio = self.__alumnos[0]  
+        for alumno in self.__alumnos[1:]:   #recorre vector de alumnos
+            #si el promedio de objeto es mayor al mejor_promedio hasta ahora
+            if alumno.getPromedio() > mejor_promedio.getPromedio():
+                mejor_promedio = alumno #asigna nuevo objeto como mejor promedio
+        return mejor_promedio #Rettorna al objeto Alumno con mejor promedio
