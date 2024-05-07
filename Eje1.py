@@ -69,3 +69,30 @@ class Grupo:
             if alumno.getPromedio() > mejor_promedio.getPromedio():
                 mejor_promedio = alumno #asigna nuevo objeto como mejor promedio
         return mejor_promedio #Rettorna al objeto Alumno con mejor promedio
+    
+# Función principal del programa
+if __name__ == "__main__":  # verifica si el nombre del módulo es "__main__"
+    #crea objeto de la clase Grupo con capacidad para 5 alumnos
+    grupo = Grupo(5)
+
+    #Se crean objetos de Alumno y se asignan al al vector alumno de Grupo
+    grupo.agregar_alumno("Juan", 20, 16.5)
+    grupo.agregar_alumno("María", 21, 15.8)
+    grupo.agregar_alumno("Pedro", 19, 17.2)
+    grupo.agregar_alumno("Luisa", 20, 16.9)
+    grupo.agregar_alumno("Carlos", 22, 16.1)
+    
+    #Muestra estado del objeto de Grupo mediante string
+    print(grupo)
+
+    #Muestra el promedio del vector de Alumno
+    print(f"Promedio del grupo: {grupo.promedio_grupo()}")
+    
+    #Muestra el mejor promedio
+    mejor_alumno = grupo.mejor_promedio()
+    #Si el vector no esta vacio
+    if mejor_alumno:
+        print(f"Mejor promedio:\n{mejor_alumno}")
+    #sino muestra que no hay alumnos
+    else:
+        print("No hay alumnos en el grupo.")
