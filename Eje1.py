@@ -14,12 +14,10 @@ class Alumno:
         return self.__edad
     def getPromedio(self):
         return self.__promedio
-    def setNombre(self, n):  #Se envian 02 parametros (implicto/explicito)
-        self.__nombre = n
-    def setEdad(self, n):
-        self.__edad = n
-    def setPromedio(self, n):
-        self.__promedio = n
+    
+    #Creacion de metodo que devolverá estado del objeto
+    def __str__(self):
+        return f"Nombre: {self.__nombre}, Edad: {self.__edad}, Promedio: {self.__promedio}"
 
 #Creación de la clase Grupo
 class Grupo:
