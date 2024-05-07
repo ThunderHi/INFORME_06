@@ -45,3 +45,7 @@ class Grupo:
             self.__alumnos.append(alumno)   #se agrega a vector alumnos
         else:   #si vector ya esta lleno, devuelve respectivo mensaje
             print("No se puede agregar más alumnos, el grupo está completo.")
+    
+    #Metodo para ordenar por promedios
+    def ordenar_por_promedio(self):
+        self.__alumnos.sort()   #sort() ordena de menor a mayor por defecto
