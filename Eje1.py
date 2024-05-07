@@ -18,6 +18,10 @@ class Alumno:
     #Creacion de metodo que devolverá estado del objeto
     def __str__(self):
         return f"Nombre: {self.__nombre}, Edad: {self.__edad}, Promedio: {self.__promedio}"
+    
+    #Creacion de metodo que compara promedio entre objetos
+    def __lt__(self, otro):
+        return self.__promedio < otro.get_promedio()
 
 #Creación de la clase Grupo
 class Grupo:
