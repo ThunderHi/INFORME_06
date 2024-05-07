@@ -25,6 +25,7 @@ class Alumno:
 
 #Creación de la clase Grupo
 class Grupo:
+    #Metodo constructor de la clase Grupo
     def __init__(self, cantidad):
         #Se indican atributos privados usando doble subguion
         self.__alumnos = [] #Vector de alumnos para objetos de la clase Alumno
