@@ -49,3 +49,11 @@ class Grupo:
     #Metodo para ordenar por promedios
     def ordenar_por_promedio(self):
         self.__alumnos.sort()   #sort() ordena de menor a mayor por defecto
+    
+    #Metodo para hallar el promedio de promedios del vector alumnos
+    def promedio_grupo(self):
+        if not self.__alumnos:  #verifica si vector esta vacio
+            return 0    #en ese caso devuelve 0 para evitar dividir entre 0
+        #se obtiene el promedio de cada alumno mediante un "for", se suma, y se divide entre
+        #la longitud del vector. Devuelve el promedio de promedios
+        return sum(alumno.get_promedio() for alumno in self.__alumnos) / len(self.__alumnos)
