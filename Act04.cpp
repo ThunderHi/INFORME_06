@@ -33,12 +33,12 @@ int main() {
   // Suma de vectores
   //se crea otro objeto y se asigna la suma
   Vector vectorC = vectorA + vectorB;
-  vectorC.imprimir(); // Resultado: Vector: (6, 8)
+  vectorC.imprimir(); // Resultado: Vector: (9.9, 12.5)
 
   // Resta de vectores
   //se crea otro objeto y se asigna la resta
   Vector vectorD = vectorA - vectorB;
-  vectorD.imprimir(); // Resultado: Vector: (-2, -2)
+  vectorD.imprimir(); // Resultado: Vector: (0.9, 2.1)
 
   return 0;
 }
