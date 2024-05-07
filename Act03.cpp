@@ -3,8 +3,7 @@ using namespace std;
 
 class Banco {   //Definir clase banco
 public:
-  // Un atributo estatico es fijo para la clase y los objetos de esta
-de dicha clase
+  // Un atributo estatico es fijo para la clase y los objetos de dicha clase
   // Atributo estatico para la tasa de interés
   static float Tasainteres;
 
