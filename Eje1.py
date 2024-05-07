@@ -1,9 +1,11 @@
 #Creación de atributos de la clase Alumno
 class Alumno:
-    #Se indican atributos privados usando doble subguion
-    __nombre = 'Desconocido'       #Nombre del alumno
-    __edad = 16                 #Edad del alumno
-    __promedio = 0.0            #Promedio del alumno
+    #Método constructor
+    def __init__(self, nombre, edad, promedio):
+        #Se indican atributos privados usando doble subguion
+        self.__nombre = nombre  #Nombre del alumno
+        self.__edad = edad      #Edad del alumno
+        self.__promedio = promedio  #Promedio del alumno
     
     #Creacion de getters y setters
     def getNombre(self):        #Self es un parámetro implicito
