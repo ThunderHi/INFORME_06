@@ -38,3 +38,10 @@ class Grupo:
             alumnos_str += str(alumno) + "\n" #se agrega en una nueva linea de alunos_str
         return f"Grupo:\n{alumnos_str}" #Devuelve el valor de alumnos_str en string
     
+    #Metodo para agregar alumnos al vector alumno
+    def agregar_alumno(self, nombre, edad, promedio): #Envio de parametros de alumno
+        if len(self.__alumnos) < self.__cantidad:   #vector actual debe ser menor a cantidad
+            alumno = Alumno(nombre, edad, promedio) #se crea instancia de Alumno
+            self.__alumnos.append(alumno)   #se agrega a vector alumnos
+        else:   #si vector ya esta lleno, devuelve respectivo mensaje
+            print("No se puede agregar más alumnos, el grupo está completo.")
