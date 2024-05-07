@@ -15,20 +15,20 @@ public:
 // Inicializar la tasa de interés estática
 float Banco::Tasainteres = 0.01; // Tasa inicial del 1%
 
-class Cuentabancaria {
+class Cuentabancaria {  //Definir clase cuenta bancaria
 private:
   float saldo;
 
 public:
   // Constructor
-  Cuentabancaria(float saldoinicial) : saldo(saldoinicial) {}   //Monto inicial de dinero en la cuenta bancaria
+  Cuentabancaria(float saldoinicial) : saldo(saldoinicial) {}   
 
   // Metodo para depositar dinero
   void depositar(float monto) {
     saldo += monto;
   }
 
-  // Metodo para retirar dinero
+  // Metodo para retirar dinero, si es menor al saldo de la cuenta muestra el mensaje Saldo insuficiente
   void retirar(float monto) {
     if (saldo >= monto) {
       saldo -= monto;
