@@ -18,4 +18,9 @@ class Alumno:
         self.__edad = n
     def setPromedio(self, n):
         self.__promedio = n
-        
+
+#Creación de la clase Grupo
+class Grupo:
+    #Se indican atributos privados usando doble subguion
+    __alumnos = []   #Vector de alumnos para objetos de la clase Alumno
+    __cantidad = 0   #Cantidad para el grupo de alumnos
