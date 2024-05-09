@@ -83,7 +83,6 @@ if __name__ == "__main__":  # verifica si el nombre del módulo es "__main__"
     alumno3 = Alumno("Pedro", 20, 19.2)
     alumno4 = Alumno("Luisa", 17, 11.9)
     alumno5 = Alumno("Carlos", 19, 16.1)
-    alumno6 = Alumno("Thunder", 19, 10)
 
     #Se crea objeto de la clase Grupo con capacidad para 5 alumnos
     grupo = Grupo(5)
