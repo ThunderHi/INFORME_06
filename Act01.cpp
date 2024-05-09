@@ -49,23 +49,6 @@ int main() {
         Estudiante("Luisa", 23, 80, 75, 82)
     };
     int numEstudiantes = sizeof(estudiantes) / sizeof(Estudiante); //Calcula el número de estudiantes en el arreglo
-    // Ordenamiento del array de estudiantes por promedio de mayor a menor usando el método de la burbuja
-    for (int i = 0; i < numEstudiantes - 1; i++) {
-        for (int j = 0; j < numEstudiantes - i - 1; j++) {
-            if (estudiantes[j].promedio < estudiantes[j + 1].promedio) {
-                // Intercambiar estudiantes[j] y estudiantes[j+1]
-                Estudiante temp = estudiantes[j];
-                estudiantes[j] = estudiantes[j + 1];
-                estudiantes[j + 1] = temp;
-            }
-        }
-    }
-
-    // Imprimir el array ordenado
-    cout << "Array ordenado por promedio de mayor a menor: \n";
-    for (int i = 0; i < numEstudiantes; i++) {
-        cout << estudiantes[i].nombre << " - Promedio: " << estudiantes[i].promedio << endl;
-    }
 
     //Llamada a la función para imprimir estudiantes con promedio mayor a 85    
     cout<<"alumnos con promedio mayor a 85:"<<endl;
