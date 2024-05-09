@@ -46,7 +46,7 @@ public:
 };
 
 int main() {
-  // Cambiar la tasa de interés del banco 
+  // Cambiar la tasa de interés del banco usando un metodo estatico
   Banco::Cambiartasainteres(0.02); // Tasa del 2%
 
   // Crear una cuenta bancaria y definir el saldo inicial
