@@ -8,7 +8,7 @@ class Estudiante {
 public:
     string nombre;
     int edad;
-    int notas[3];  
+    int notas[3]; //Se indica que "notas" es un arreglo de enteros de longitud 3  
     double promedio;
 
     //Constructor para inicializar los datos
