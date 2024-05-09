@@ -8,6 +8,7 @@ public:
   static float Tasainteres;
 
   // Metodo estatico para cambiar la tasa de interés
+  // Los metodos estaticos se pueden llamar sin necesidad de crear instancias de clase y afecta solo a la clase Banco.
   static void Cambiartasainteres(float nuevatasa) {
     Tasainteres = nuevatasa;
   }
@@ -38,14 +39,14 @@ public:
     }
   }
 
-  // Calcular interés ganado usando la tasa de interés estática 
+  // Calcular interés ganado usando la tasa de interés estática mediante el operador de alcance “::”, este operador permite que las clases puedan acceder a las variables estáticas de otras clases
   float calcularInteres() {
     return saldo * Banco::Tasainteres;
   }
 };
 
 int main() {
-  // Cambiar la tasa de interés del banco
+  // Cambiar la tasa de interés del banco 
   Banco::Cambiartasainteres(0.02); // Tasa del 2%
 
   // Crear una cuenta bancaria y definir el saldo inicial
